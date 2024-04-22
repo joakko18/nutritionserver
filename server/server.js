@@ -6,7 +6,7 @@ const cors = require('cors');
 
 // Apply CORS middleware globally
 app.use(cors({
-    origin: 'https://nutritionstore.netlify.app/',  // Replace with your frontend's origin
+    origin: 'http://localhost:3000/',  // Replace with your frontend's origin
     methods: 'GET,POST,OPTIONS,PUT,DELETE',
     credentials: true,
 }));
@@ -22,7 +22,7 @@ const endpoints = require('./routes/route');
 app.use('/', endpoints);  // This line handles all routes defined in `./routes/route.js`
 
 // Remove the redundant CORS configuration for the login route
-// app.post('/login', cors({ origin: 'https://nutritionstore.netlify.app/' }), endpoints);
+// app.post('/login', cors({ origin: 'http://localhost:3000/' }), endpoints);
 
 app.listen(PORT, () => {
   console.log(`Server listening on port http://localhost:${PORT}`);
