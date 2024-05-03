@@ -241,8 +241,8 @@ router.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: 'http://localhost:3000/success',
-      cancel_url: 'http://localhost:3000/cancel',
+      success_url: 'https://nutritionstore.netlify.app/success',
+      cancel_url: 'https://nutritionstore.netlify.app/cancel',
     });
 
     res.json({ sessionId: session.id });
